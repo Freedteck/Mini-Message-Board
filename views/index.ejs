@@ -2,13 +2,19 @@
 <html lang="en">
   <%- include('head', { title: title }) %>
   <body>
+    <%- include('header') %>
     <main>
       <% messages.map(message => { %>
-      <h2><%= message.text %></h2>
-      <p><%= message.user %></p>
-      <p><%= message.added %></p>
-      <a href="message/<%= message.id %>">Open</a>
+      <div class="card">
+        <div>
+          <h2><%= message.user %></h2>
+          <p class="text"><%= message.text %></p>
+          <p class="date"><%= message.added %></p>
+          <a href="message/<%= message.id %>">Open</a>
+        </div>
+      </div>
       <% }) %>
     </main>
+    <%- include('footer') %>
   </body>
 </html>

@@ -2,10 +2,15 @@
 <html lang="en">
   <%- include('head', { title: title }) %>
   <body>
-    <main>
-      <h2><%= message.text %></h2>
-      <p><%= message.user %></p>
-      <p><%= message.added %></p>
+    <%- include('header') %>
+    <main class="message">
+      <h2>Message by <%= message.user %></h2>
+      <div>
+        <p class="text"><%= message.text %></p>
+        <p class="date"><%= message.added %></p>
+        <a href="/">&lt; &lt; Back</a>
+      </div>
     </main>
+    <%- include('footer') %>
   </body>
 </html>

@@ -2,24 +2,37 @@
 <html lang="en">
   <%- include('head', { title: 'Add Message' }) %>
   <body>
-    <form method="POST" action="/new">
-      <fieldset>
-        <legend>Add Message</legend>
-        <label>
-          Author's name:
-          <input type="text" name="authorName" placeholder="John doe" />
-        </label>
-        <label>
-          Message text:
-          <textarea
-            name="messageText"
-            cols="30"
-            rows="10"
-            placeholder="Something here ..."
-          ></textarea>
-        </label>
-        <button>Add</button>
-      </fieldset>
-    </form>
+    <%- include('header') %>
+
+    <main class="container">
+      <form method="POST" action="/new">
+        <fieldset>
+          <legend>Add Message</legend>
+          <label>
+            Author's name:
+            <input
+              type="text"
+              name="authorName"
+              placeholder="John doe"
+              required
+              minlength="2"
+            />
+          </label>
+          <label>
+            Message text:
+            <textarea
+              name="messageText"
+              cols="30"
+              rows="10"
+              placeholder="Something here ..."
+              required
+              minlength="2"
+            ></textarea>
+          </label>
+          <button>Add</button>
+        </fieldset>
+      </form>
+    </main>
+    <%- include('footer') %>
   </body>
 </html>
