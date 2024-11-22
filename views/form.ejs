@@ -1,19 +1,29 @@
-<form method="POST" action="/new">
-  <fieldset>
-    <legend>Add Message</legend>
-    <label>
-      Author's name:
-      <input type="text" name="authorName" placeholder="John doe" />
-    </label>
-    <label>
-      Message text:
-      <textarea
-        name="messageText"
-        cols="30"
-        rows="10"
-        placeholder="Something here ..."
-      ></textarea>
-    </label>
-    <button>Add</button>
-  </fieldset>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form method="POST" action="/new">
+      <fieldset>
+        <legend>Add Message</legend>
+        <label>
+          Author's name:
+          <input type="text" name="authorName" placeholder="John doe" />
+        </label>
+        <label>
+          Message text:
+          <textarea
+            name="messageText"
+            cols="30"
+            rows="10"
+            placeholder="Something here ..."
+          ></textarea>
+        </label>
+        <button>Add</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

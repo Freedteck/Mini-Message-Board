@@ -7,12 +7,9 @@
   </head>
   <body>
     <main>
-      <% messages.map(message => { %>
       <h2><%= message.text %></h2>
       <p><%= message.user %></p>
       <p><%= message.added %></p>
-      <a href="message/<%= message.id %>">Open</a>
-      <% }) %>
     </main>
   </body>
 </html>
